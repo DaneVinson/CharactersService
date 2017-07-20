@@ -16,7 +16,10 @@ namespace CharactersService.ConsoleApp
 
             try
             {
-                CallWcfService();
+                for (int i = 0; i < 123; i++)
+                {
+                    CallWcfService();
+                }
             }
             catch (Exception ex)
             {

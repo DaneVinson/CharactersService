@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel;
+using System.ServiceModel.Channels;
+using System.ServiceModel.Security;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,6 +19,9 @@ namespace CharactersService.ConsoleApp
             try
             {
                 CallWcfService();
+            }
+            catch (MessageSecurityException ex)
+            {
             }
             catch (Exception ex)
             {
@@ -38,7 +43,7 @@ namespace CharactersService.ConsoleApp
             {
                 channelFactory = new ChannelFactory<ICharactersService>("CharactersServiceEndpoint");
                 channelFactory.Credentials.UserName.UserName = "dane";
-                channelFactory.Credentials.UserName.Password = "dane";
+                channelFactory.Credentials.UserName.Password = "4";
                 var proxy = channelFactory.CreateChannel();
 
                 // GetCharacters

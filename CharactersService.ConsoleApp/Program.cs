@@ -41,7 +41,11 @@ namespace CharactersService.ConsoleApp
             ChannelFactory<ICharactersService> channelFactory = null;
             try
             {
-                channelFactory = new ChannelFactory<ICharactersService>("CharactersServiceEndpoint");
+                //channelFactory = new ChannelFactory<IProcessorService>(ProcessorServiceConfigurationName, new EndpointAddress(CurrentServicePackJob.Endpoint));
+                string endpoint = "http://charactersservice.azurewebsites.net/wcfcharactersservice.svc";
+
+                channelFactory = new ChannelFactory<ICharactersService>("CharactersServiceEndpoint2", new EndpointAddress(endpoint));
+                //channelFactory = new ChannelFactory<ICharactersService>("CharactersServiceEndpoint");
                 channelFactory.Credentials.UserName.UserName = "dane";
                 channelFactory.Credentials.UserName.Password = "4";
                 var proxy = channelFactory.CreateChannel();

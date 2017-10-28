@@ -11,6 +11,7 @@ using System.ServiceModel;
 using System.ServiceModel.Activation;
 using System.ServiceModel.Web;
 using System.Text;
+using System.Threading;
 
 namespace CharactersService.Wcf
 {
@@ -72,6 +73,7 @@ namespace CharactersService.Wcf
         {
             try
             {
+                Thread.Sleep(1000);
                 return Service.GetCharacters();
             }
             catch (Exception exception)

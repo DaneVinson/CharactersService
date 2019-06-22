@@ -22,10 +22,13 @@ namespace CharactersService.Wcf
     {
         #region ICharactersService
 
-        public WcfCharactersService()
+        static WcfCharactersService()
         {
             Service = new InMemoryService();
         }
+
+        public WcfCharactersService()
+        { }
 
         public Character CreateCharacter(Character character)
         {
@@ -109,7 +112,7 @@ namespace CharactersService.Wcf
 
         private readonly ILog Log = LogManager.GetLogger(nameof(WcfCharactersService));
 
-        private readonly ICharactersService Service;
+        private static readonly ICharactersService Service;
 
         private readonly string StorageUnc = ConfigurationManager.AppSettings["storageUnc"];
     }

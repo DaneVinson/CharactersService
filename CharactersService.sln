@@ -1,13 +1,20 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharactersService.ConsoleApp", "CharactersService.ConsoleApp\CharactersService.ConsoleApp.csproj", "{505DD311-E453-4948-85AA-F9BB5335BB61}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharactersService.Wcf", "CharactersService.Wcf\CharactersService.Wcf.csproj", "{FD3C0325-97BA-43FB-8580-B6DA1EBF84D4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharactersService.Domain", "CharactersService.Domain\CharactersService.Domain.csproj", "{926AE992-01ED-4F6E-9AD0-A732389A4BCF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFiles", "SolutionFiles", "{F51D2A4D-62A0-43E2-9189-5D2A690B0D2F}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		readme.md = readme.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,5 +37,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0B50480B-79B8-48B1-B3C5-5755D27EBAD8}
 	EndGlobalSection
 EndGlobal

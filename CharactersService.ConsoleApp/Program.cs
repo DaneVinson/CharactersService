@@ -1,6 +1,7 @@
 ﻿using CharactersService.Domain;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.ServiceModel;
 using System.Text;
@@ -36,7 +37,7 @@ namespace CharactersService.ConsoleApp
             ChannelFactory<ICharactersService> channelFactory = null;
             try
             {
-                channelFactory = new ChannelFactory<ICharactersService>("CharactersServiceEndpoint");
+                channelFactory = new ChannelFactory<ICharactersService>(ConfigurationManager.AppSettings["EndpointName"]);
                 channelFactory.Credentials.UserName.UserName = "dane";
                 channelFactory.Credentials.UserName.Password = "dane";
                 var proxy = channelFactory.CreateChannel();

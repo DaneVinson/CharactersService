@@ -14,15 +14,16 @@ namespace CharactersService.Domain
     {
         public InMemoryService()
         {
+            var machine = Environment.MachineName;
             Characters = new List<Character>()
             {
-                new Character() { LongName = "Bilbo Baggins", Name = "Bildo", Source = "Fiction by J. R. R. Tolkien" },
-                new Character() { LongName = "Samwise Gamgee", Name = "Sam", Source = "Fiction by J. R. R. Tolkien" },
-                new Character() { LongName = "Froto Baggins", Name = "Froto", Source = "Fiction by J. R. R. Tolkien" },
-                new Character() { LongName = "Galdalf the Grey", Name = "Gandalf", Source = "Fiction by J. R. R. Tolkien" },
-                new Character() { LongName = "Conan the Barbarrian", Name = "Conan", Source = "Fiction by Robert E. Howard" },
-                new Character() { LongName = "Hurcules, Son of Zeus", Name = "Hurcules", Source = "Greek Mythology" },
-                new Character() { LongName = "Darth Vader, Sith Lord", Name = "Darth Vader", Source = "Fiction by George Lucas" }
+                new Character() { Name = "Bilbo", Source = machine },
+                new Character() { Name = "Sam", Source = machine },
+                new Character() { Name = "Froto", Source = machine },
+                new Character() { Name = "Gandalf", Source = machine },
+                new Character() { Name = "Conan", Source = machine },
+                new Character() { Name = "Hurcules", Source = machine },
+                new Character() { Name = "Darth Vader", Source = machine }
             };
         }
 

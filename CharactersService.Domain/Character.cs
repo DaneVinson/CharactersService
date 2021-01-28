@@ -21,7 +21,7 @@ namespace CharactersService.Domain
 
         public override string ToString()
         {
-            return $"{Name}, {LongName}, {Source}";
+            return $"{Name}, {Source}";
         }
     }
 }

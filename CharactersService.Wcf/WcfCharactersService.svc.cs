@@ -20,8 +20,6 @@ namespace CharactersService.Wcf
         Namespace = "http://charactersservice.com")]
     public class WcfCharactersService : ICharactersService
     {
-        #region ICharactersService
-
         static WcfCharactersService()
         {
             Service = new InMemoryService();
@@ -30,12 +28,13 @@ namespace CharactersService.Wcf
         public WcfCharactersService()
         { }
 
+        #region ICharactersService
+
         public Character CreateCharacter(Character character)
         {
             try
             {
                 var newCharacter = Service.CreateCharacter(character);
-                StoreCharacter(newCharacter);
                 return newCharacter;
             }
             catch (Exception exception)
@@ -98,17 +97,6 @@ namespace CharactersService.Wcf
         }
 
         #endregion
-
-        private void StoreCharacter(Character character)
-        {
-            var json = JsonConvert.SerializeObject(character);
-            Log.Debug($"Storing character: {json}");
-            using (var writer = new StreamWriter(Path.Combine(StorageUnc, $"{character.Name}.json"), false))
-            {
-                writer.WriteLine();
-            }
-        }
-
 
         private readonly ILog Log = LogManager.GetLogger(nameof(WcfCharactersService));
 

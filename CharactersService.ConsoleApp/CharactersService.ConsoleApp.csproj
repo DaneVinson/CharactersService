@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CharactersService.ConsoleApp</RootNamespace>
     <AssemblyName>CharactersService.ConsoleApp</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
@@ -61,7 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CharactersService.Domain\CharactersService.Domain.csproj">
-      <Project>{926ae992-01ed-4f6e-9ad0-a732389a4bcf}</Project>
+      <Project>{cf20fe84-98d5-4e0e-bdca-204b52e57b68}</Project>
       <Name>CharactersService.Domain</Name>
     </ProjectReference>
   </ItemGroup>
